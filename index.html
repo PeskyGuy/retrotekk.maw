@@ -1,264 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Retro Tekk: The Return of Tekk Style</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    /* 2000s blog vibe - boxed layout, textured background, big header */
-    body {
-      background: #f4f1ea url('https://www.transparenttextures.com/patterns/cork-wallet.png');
-      font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
-      color: #222;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      width: 960px;
-      margin: 24px auto;
-      background: #fff;
-      border: 6px solid #c6b89f;
-      box-shadow: 4px 4px 0 rgba(0,0,0,0.08);
-      overflow: hidden;
-    }
-
-    header {
-      background: linear-gradient(#333, #222);
-      color: #ffd;
-      padding: 18px;
-      text-align: left;
-      border-bottom: 4px solid #a88;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-      letter-spacing: 1px;
-      text-shadow: 1px 1px 0 #000;
-    }
-
-    header .tagline {
-      font-size: 12px;
-      color: #e6ddb1;
-      margin-top: 6px;
-    }
-
-    nav {
-      background: #e9e1d1;
-      padding: 8px 12px;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-    }
-
-    nav a {
-      color: #333;
-      text-decoration: none;
-      margin-right: 12px;
-      font-size: 13px;
-    }
-
-    .layout {
-      display: flex;
-      align-items: flex-start;
-    }
-
-    .main {
-      width: 660px;
-      padding: 18px;
-    }
-
-    .post {
-      margin-bottom: 22px;
-      padding-bottom: 12px;
-      border-bottom: 1px dashed #ddd;
-    }
-
-    .post h2 {
-      margin: 6px 0 8px;
-      font-size: 22px;
-      color: #231f20;
-    }
-
-    .post .meta {
-      font-size: 12px;
-      color: #777;
-      margin-bottom: 10px;
-    }
-
-    .post img {
-      max-width: 100%;
-      border: 4px solid #e0d7c9;
-      background: #faf7f3;
-      display: block;
-      margin: 8px 0;
-    }
-
-    aside.sidebar {
-      width: 260px;
-      padding: 18px;
-      background: #fbf8f3;
-      border-left: 1px solid #e6dfcf;
-    }
-
-    .widget {
-      background: #fff;
-      padding: 10px;
-      border: 1px solid #e1d7c8;
-      margin-bottom: 14px;
-    }
-
-    .retro-button {
-      display: inline-block;
-      padding: 8px 12px;
-      background: linear-gradient(#a84, #843);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-
-    footer {
-      padding: 12px 18px;
-      font-size: 12px;
-      color: #666;
-      background: #f6f3ee;
-      border-top: 4px solid #e0d7c9;
-      text-align: center;
-    }
-
-    /* decorative 2000s marquee */
-    .marquee {
-      background: url('https://www.transparenttextures.com/patterns/az-subtle.png');
-      padding: 6px 12px;
-      color: #222;
-      font-weight: bold;
-      border: 2px solid #d3c8b3;
-      margin-top: 8px;
-    }
-
-    /* small print credits */
-    .credit {
-      font-size: 11px;
-      color: #666;
-    }
-
-    /* slightly chunky social icons look */
-    .social-links img {
-      width: 32px;
-      margin-right: 6px;
-      vertical-align: middle;
-    }
-
-    /* Nostalgic blink effect joystick */
-    @keyframes blink {
-      0% {opacity: 1;}
-      50% {opacity: .2;}
-      100% {opacity: 1;}
-    }
-    .blink { animation: blink 1.5s infinite; color: #a22; font-weight: bold; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RetroTekk – The Revival of Tekk Style</title>
+<style>
+  body {
+    background-color: #0b0b0b;
+    color: #d0d0d0;
+    font-family: "Verdana", sans-serif;
+    background-image: url('images/bg_grid.gif');
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #555;
+  }
+  header img {
+    width: 120px;
+    height: auto;
+  }
+  h1 {
+    font-family: "Impact", sans-serif;
+    font-size: 2em;
+    color: #ffcc66;
+    text-shadow: 1px 1px 0 #000;
+  }
+  nav {
+    background-color: #111;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+  }
+  nav a {
+    color: #ffcc66;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  nav a:hover {
+    color: #ffffff;
+  }
+  .content {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  .post {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+  }
+  .post img {
+    width: 100%;
+    border: 2px solid #222;
+    margin-top: 10px;
+  }
+  .footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #333;
+    font-size: 0.8em;
+    color: #777;
+  }
+  .signature {
+    font-family: "Courier New", monospace;
+    color: #ffcc66;
+  }
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <h1>Retro Tekk</h1>
-      <div class="tagline">A blog about the resurgence of Tekk styled fashion and dieselpunk revival</div>
-    </header>
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Lookbooks</a>
-      <a href="#">DIY</a>
-      <a href="#">Events</a>
-      <a href="#">Contact</a>
-    </nav>
+<header>
+  <img src="7b482c47-5dc4-4436-99f5-1b1408ce261f.png" alt="RetroTekk Logo">
+  <h1>RetroTekk</h1>
+  <p><em>“The Sparks of the Past Powering the Future.”</em></p>
+</header>
 
-    <div class="marquee">
-      <marquee behavior="scroll" direction="left">Breaking: Tekk Tailors Collective hosts "Iron & Tweed" runway this Saturday. Vintage goggles mandatory.</marquee>
-    </div>
+<nav>
+  <a href="#">Home</a> |
+  <a href="#">Style</a> |
+  <a href="#">Gadgets</a> |
+  <a href="#">The Union Archives</a> |
+  <a href="#">About</a>
+</nav>
 
-    <div class="layout">
-      <main class="main">
-        <article class="post">
-          <h2>The 1930s Recut: Why Tekk is Back</h2>
-          <div class="meta">By L. Metoformin | Oct 12, 2005</div>
-          <p>The last few seasons have seen a steady rise in outfits that blend industrial silhouettes with tailored menswear details. What we call Tekk today reinterprets midcentury workwear with modern tailoring and functional hardware. Here are a few quick picks from recent shows.</p>
+<div class="content">
 
-          <!-- Image 1: menswear portrait -->
-          <img alt="Menswear dieselpunk portrait" src="https://au.pinterest.com/pin/39406565473047883/">
-          <div class="credit">Photo source: Pinterest. Image used as editorial reference. </div>
-        </article>
-
-        <article class="post">
-          <h2>DIY: Adding Utility and Patina</h2>
-          <div class="meta">By A. Rigger | Sep 28, 2005</div>
-          <p>Personalizing pieces with rivets, harness clips, and reclaimed metal badges gives garments a lived-in industrial feel. Distressing is encouraged, however keep seams reinforced for durability.</p>
-
-          <!-- Image 2: lineup sketches -->
-          <img alt="Dieselpunk outfit sketches" src="https://au.pinterest.com/pin/dieselpunk-villain-costume-designs--506162445602446277/">
-          <div class="credit">Costume concept art and outfit sketches. </div>
-        </article>
-
-        <article class="post">
-          <h2>Lookbook: Uniforms Reimagined</h2>
-          <div class="meta">By L. Metoformin | Aug 03, 2005</div>
-          <p>From double-breasted mechanic coats to leather flight jackets with brass trims, the silhouette language borrows from military tailoring while introducing modern asymmetry.</p>
-
-          <!-- Image 3: military jacket -->
-          <img alt="Dieselpunk jacket" src="https://www.pinterest.com/pin/291467407104336771/">
-          <div class="credit">Editorial: military inspired jacket. </div>
-        </article>
-
-        <article class="post">
-          <h2>Editorial: Factories to Fashion Week</h2>
-          <div class="meta">By M. Vale | Jun 18, 2005</div>
-          <p>Photographers are staging shoots inside decommissioned plants and foundries to place the garments in context. Lighting and contrast emphasize the industrial textures and tailored cuts.</p>
-
-          <!-- Image 4: industrial editorial -->
-          <img alt="Industrial fashion editorial" src="https://dieselpunksencyclopedia.wordpress.com/6-6-dieselpunk-fashion/">
-          <div class="credit">Shoot location and aesthetic reference. </div>
-        </article>
-      </main>
-
-      <aside class="sidebar">
-        <div class="widget">
-          <h3>About this blog</h3>
-          <p>Retro Tekk started as a zine in the early 2000s and evolved into this online log. We cover lookbooks, DIY hacks, and scene events.</p>
-        </div>
-
-        <div class="widget">
-          <h3>Popular Tags</h3>
-          <p><strong>uniform</strong> <strong>patchwork</strong> <strong>goggles</strong> <strong>tweed</strong></p>
-        </div>
-
-        <div class="widget">
-          <h3>Upcoming</h3>
-          <p>Iron & Tweed runway | Oct 15, 2005</p>
-          <a class="retro-button" href="#">Get Tickets</a>
-        </div>
-
-        <div class="widget">
-          <h3>Follow</h3>
-          <div class="social-links">
-            <a href="#"><img alt="retro icon" src="https://www.iconfinder.com/data/icons/retro-social-media/512/retro_01-512.png"> vintageblog</a>
-          </div>
-        </div>
-
-        <div class="widget">
-          <h3>Search the Archive</h3>
-          <form onsubmit="alert('Search simulated for demo'); return false;">
-            <input type="text" placeholder="search posts" style="width:100%; padding:6px;">
-            <input type="submit" value="Search" style="width:100%; margin-top:6px; padding:6px;">
-          </form>
-        </div>
-      </aside>
-    </div>
-
-    <footer>
-      <div>&copy; 2005 Retro Tekk. All content is for editorial demo use only. Images credited in-post.</div>
-      <div class="blink">This is a nostalgic demo layout</div>
-    </footer>
+  <div class="post">
+    <h2>The Resurgence of Tekk Fashion (2005)</h2>
+    <p>Once considered a relic of the Civil Centennial War, Tekk fashion is back on the streets. 
+    From riveted jackets to brass-trimmed goggles, the youth of 2005 are embracing the industrial 
+    glamour of the diesel age. With the rise of arcane circuits and magi-tech utilities, fashion now 
+    celebrates the union of soot and spell once again.</p>
+    <img src="https://i.pinimg.com/736x/66/f4/1e/66f41e3b56b046fbe4ee26cd6b7b0997.jpg" alt="Dieselpunk fashion streetwear">
+    <img src="https://i.pinimg.com/736x/1f/85/33/1f8533b2f048e92a497b0b372d414ad3.jpg" alt="Tekk inspired leather attire">
+    <img src="https://i.pinimg.com/736x/6c/2d/10/6c2d1078c6b1f0bb8ce36a9a607a40d4.jpg" alt="Arcane dieselpunk ensemble">
+    <p>In a world connected through the M.A.W., image and identity blur like steam on a visor. 
+    For many, wearing the mark of Tekk is not nostalgia—it is rebellion.</p>
   </div>
+
+  <div class="post">
+    <h2>Interview: Gearwright A. Lyra on the Future of Fabric</h2>
+    <p>We caught up with Arcane Engineer Lyra of the New Union Atelier, who believes the next step 
+    in Tekk fashion lies in <strong>infused materials</strong>. “Why stop at looking powerful?” she says. 
+    “When your jacket can power your charm circuit and repel minor curses, you’re wearing history—and future—at once.”</p>
+    <img src="https://i.pinimg.com/736x/2a/8a/10/2a8a10e828e932de22fd9f85d8e9f424.jpg" alt="Arcane engineer in Tekk attire">
+  </div>
+
+  <div class="post">
+    <h2>RetroTekk Picks: Essentials for the Neo-Diesel Look</h2>
+    <ul>
+      <li>Welded leather coats with spell-thread lining</li>
+      <li>Gearlink chokers and aether-band wrist bracers</li>
+      <li>Monogrammed goggles (because who doesn’t?)</li>
+      <li>Boots designed for both catwalks and cockpits</li>
+    </ul>
+    <img src="https://i.pinimg.com/736x/56/1a/8b/561a8bcb8a802c23fda53c87b5a90276.jpg" alt="Dieselpunk accessories">
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>© 2005 RetroTekk. All rights reserved. Maintained via the Mass Arcane Web.</p>
+  <p class="signature">~ blog written by Lizzie Metoformin ~</p>
+</div>
+
 </body>
 </html>
